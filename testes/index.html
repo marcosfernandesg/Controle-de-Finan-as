@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>  
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portal de Notícias</title>
+
+<link rel="stylesheet" href="styles/home.css">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  
+</head>
+
+
+<body>
+ <header class="container">
+    <nav id="primary">
+        <h1>Controlador de Finanças</h1>
+        <div class="header-info">
+            <span class="header-badge">📊 Organize suas contas</span>
+            <span class="header-badge">✨ Simples e prático</span>
+        </div>
+    </nav>
+</header>
+
+<main class="container">
+    <!-- Seção do Saldo -->
+    <section id="saldo">
+        <h2>Saldo Atual</h2>
+        <p id="valor-saldo">R$ 0,00</p>
+    </section>
+
+    <!-- Formulário de Transação -->
+    <section id="formulario">
+        <h2>Adicionar Transação</h2>
+        <form>
+            <div>
+                <label for="descricao">Descrição:</label>
+                <input type="text" id="descricao" placeholder="Ex: Salário, Mercado...">
+            </div>
+
+            <div>
+                <label for="valor">Valor:</label>
+                <input type="number" id="valor" placeholder="0.00" step="0.01">
+            </div>
+
+            <div>
+                <label for="categoria">Categoria:</label>
+                <select id="categoria">
+                    <option value="">Selecione...</option>
+                    <option value="salario">Salário</option>
+                    <option value="alimentacao">Alimentação</option>
+                    <option value="transporte">Transporte</option>
+                    <option value="lazer">Lazer</option>
+                    <option value="contas">Contas</option>
+                </select>
+            </div>
+
+            <button type="button" id="btn-receita">+ Receita</button>
+            <button type="button" id="btn-despesa">- Despesa</button>
+        </form>
+    </section>
+
+    <!-- Lista de Transações -->
+    <section id="historico">
+        <h2>Histórico</h2>
+        <ul id="lista-transacoes">
+            <!-- As transações vão aparecer aqui pelo JavaScript -->
+        </ul>
+    </section>
+</main>
+</body>
+</html>

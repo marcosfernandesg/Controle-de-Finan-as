@@ -1,0 +1,194 @@
+main.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 32px 20px;
+}
+
+/* === SEÇÃO DO SALDO === */
+#saldo {
+    background: linear-gradient(135deg, var(--brand-color-dark), var(--brand-color-light));
+    border: 2px solid var(--brand-color-light);
+    border-radius: 16px;
+    padding: 32px;
+    text-align: center;
+    margin-bottom: 32px;
+    box-shadow: 0 8px 32px rgba(96, 165, 250, 0.2);
+}
+
+#saldo h2 {
+    font: var(--h3);
+    color: var(--text-color-secundary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+}
+
+#valor-saldo {
+    font: 800 48px/120% var(--font-family);
+    color: var(--text-color-primary);
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* === FORMULÁRIO === */
+#formulario {
+    background: var(--stroke-color);
+    border: 1px solid var(--stroke-color);
+    border-radius: 16px;
+    padding: 32px;
+    margin-bottom: 32px;
+}
+
+#formulario h2 {
+    font: var(--h2);
+    color: var(--text-color-primary);
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+    border-bottom: 2px solid var(--bg-color);
+}
+
+form > div {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font: var(--text-sm);
+    color: var(--text-color-secundary);
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+input, select {
+    width: 100%;
+    padding: 14px 16px;
+    background: var(--bg-color);
+    border: 2px solid var(--bg-color);
+    border-radius: 8px;
+    color: var(--text-color-primary);
+    font: var(--text);
+    transition: all 0.3s ease;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: var(--brand-color-light);
+    box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.1);
+}
+
+input::placeholder {
+    color: var(--text-color-secundary);
+    opacity: 0.5;
+}
+
+select {
+    cursor: pointer;
+}
+
+select option {
+    background: var(--bg-color);
+    color: var(--text-color-primary);
+}
+
+/* === BOTÕES === */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+button {
+    padding: 16px 24px;
+    border: none;
+    border-radius: 8px;
+    font: var(--text-span);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+#btn-receita {
+    background: linear-gradient(135deg, #10B981, #059669);
+    color: white;
+}
+
+#btn-receita:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(16, 185, 129, 0.3);
+}
+
+#btn-despesa {
+    background: linear-gradient(135deg, #EF4444, #DC2626);
+    color: white;
+}
+
+#btn-despesa:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(239, 68, 68, 0.3);
+}
+
+/* === HISTÓRICO === */
+#historico {
+    background: var(--stroke-color);
+    border: 1px solid var(--stroke-color);
+    border-radius: 16px;
+    padding: 32px;
+}
+
+#historico h2 {
+    font: var(--h2);
+    color: var(--text-color-primary);
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+    border-bottom: 2px solid var(--bg-color);
+}
+
+#lista-transacoes {
+    list-style: none;
+}
+
+#lista-transacoes li {
+    background: var(--bg-color);
+    border: 1px solid var(--bg-color);
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+#lista-transacoes li:hover {
+    border-color: var(--brand-color-light);
+    transform: translateX(4px);
+}
+
+/* === MENSAGEM VAZIA === */
+#lista-transacoes:empty::before {
+    content: "Nenhuma transação ainda. Adicione sua primeira! 💰";
+    display: block;
+    text-align: center;
+    padding: 40px;
+    color: var(--text-color-secundary);
+    font: var(--text);
+}
+
+/* === RESPONSIVO === */
+@media (max-width: 768px) {
+    main.container {
+        padding: 20px 16px;
+    }
+
+    #saldo {
+        padding: 24px;
+    }
+
+    #valor-saldo {
+        font-size: 36px;
+    }
+
+    #formulario, #historico {
+        padding: 24px;
+    }
+}
